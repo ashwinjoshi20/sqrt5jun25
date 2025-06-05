@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<title>Square Finder App By Kamal Sir</title>
+		<link rel="stylesheet" href="mystyle.css"></link>
+		<script src="myscript.js"></script>
+	</head>
+
+	<body>
+	<div class="nav">
+		<a href="index.html">Home</a>
+		<a href="aboutus.html">About Us</a>
+	</div>
+		<br/>
+		<h1>Square Finder App </h1>
+		<form onsubmit="find()">
+			<input type="number" id="num" placeholder="Enter Number" step="any" />
+			<br/><br/>
+			<input type="submit" value="Find Square" />
+		</form>
+		<script>
+			function find()
+			{
+				event.preventDefault();
+				let num=document.getElementById("num");
+				
+				if(num.value==="")
+				{
+					alert("Please Enter Some Number");
+					num.focus();
+					return;
+				}
+			
+				let n=parseFloat(num.value);
+				let sqr=n**2;
+				let ans="Square-->"+sqr.toFixed(2);
+				localStorage.setItem("ans",ans);
+				window.location.href="result.html";
+			}
+		</script>
+	</body>
+</html>

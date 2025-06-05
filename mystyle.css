@@ -1,0 +1,132 @@
+/* mystyle.css */
+
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #e0f7fa, #ffffff);
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.nav {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    margin-bottom: 40px;
+    transition: background 0.3s ease;
+}
+
+.nav a {
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+}
+
+.nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+/* Headings */
+h1 {
+    font-size: 42px;
+    color: #0077b6;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    color: #023e8a;
+    margin-top: 20px;
+}
+
+/* Form Styling */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    margin: auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 2px solid #00b4d8;
+    border-radius: 10px;
+    transition: border 0.3s;
+}
+
+input[type="number"]:focus {
+    border-color: #0077b6;
+    outline: none;
+}
+
+/* Submit Button */
+input[type="submit"] {
+    background: linear-gradient(90deg, #00b4d8, #0077b6);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    transform: scale(1.05);
+    background: linear-gradient(90deg, #0096c7, #023e8a);
+}
+
+/* About Us Paragraphs */
+p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
